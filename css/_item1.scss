@@ -1,0 +1,48 @@
+/* item */
+#item {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.item-img {
+  width: 50%;
+}
+
+#item .item-text {
+  width: 42%;
+  p {
+    text-align: start;
+    margin-bottom: 30px;;
+  }  
+}
+
+#item dl {
+  display: flex;
+  flex-wrap: wrap;
+  dt {
+    width: 30%;
+  }
+  dd {
+    width: 70%;
+  }
+}
+
+.backto {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width:900px) {
+  #item {
+    display: block;
+  }
+  .item-img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #item .item-text {
+    width: 100%;
+  }
+}

@@ -1,0 +1,114 @@
+/* header */
+#header {
+  width: 100%;
+  height: 80px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+#header h1 {
+  font-size: 2.25rem;
+  a {
+    display: block;
+    width: 180px;
+  }
+}
+
+/* ナビゲーションメニューの実装 */
+#nav {
+  position: fixed;
+  width: 300px;
+  left: -300px;
+  top: 0;
+  color: #fff;
+  padding: 36px 50px;
+  transition: all 0.5s;
+  z-index: 2;
+  opacity: 0; 
+}
+
+#nav ul {
+  padding: 40px 40px 0;
+  li {
+    margin-bottom: 14px;
+    a {
+      color: #fff;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* ハンバーガーメニューのクリックする部分の実装 */
+.hamburger-menu {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 20;
+}
+
+.hamburger-menu span {
+  width: 30px;
+  height: 2px;
+  background: #333;
+  display: block;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.hamburger-menu span:nth-child(1){
+  top: 10px;
+}
+.hamburger-menu span:nth-child(2){
+  top: 20px;
+}
+
+/* hamburger-menuクラスにactiveクラスが付与されたら✖️に変化させる */
+.hamburger-menu.active span:nth-child(1) {
+  top: 10px;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  top: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+/*-------------------------------------------
+hamburger-navigationIDにactiveクラスが付与されたら、
+ナビゲーションメニューを表示させる。
+-------------------------------------------*/
+#nav.active {
+  opacity: 1;
+  left: 0;
+}
+
+#mask.active {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+#mask {
+  display: none;
+  transition: all 0.8s;
+}
+
+

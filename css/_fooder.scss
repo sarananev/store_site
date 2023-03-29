@@ -1,0 +1,31 @@
+/* footer */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  p {
+    font-size: 1rem;
+  }
+}
+
+#footer ul {
+  display: flex;
+  justify-content: start;
+  li {
+    padding-right: 30px;
+  }
+}
+
+/* footer SP版 */
+@media screen and (max-width:900px) {
+  #footer {
+    flex-direction: column;
+    align-items: start;
+  }
+  ul {
+    margin-bottom: 10px;
+  }
+}

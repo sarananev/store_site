@@ -1,0 +1,53 @@
+/* company */
+#company {
+  max-width: 600px;
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    dt {
+      width: 30%;
+      padding: 20px 0;
+      border-bottom: 1px solid #DCDBDB;
+    }
+    dd {
+      width: 60%;
+      padding: 20px 0;
+      border-bottom: 1px solid #DCDBDB;
+    }
+  }
+}
+
+#company dt:nth-of-type(6) {
+  border-bottom: none;
+}
+
+#company dd:last-child {
+  border-bottom: none;
+}
+
+#company .map {
+  filter: grayscale(1);
+}
+
+@media screen and (max-width:900px) {
+  #company {
+    dl {
+      display: block;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      dt {
+        width: 100%;
+        padding: 20px 0;
+      }
+      dd {
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
